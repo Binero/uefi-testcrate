@@ -1,0 +1,19 @@
+[package]
+name = "testcrate"
+version = "0.1.0"
+authors = ["Jeroen Bollen <contact@jeroenbollen.eu>"]
+
+[lib]
+path = "src/main.rs"
+crate-type = ["staticlib"]
+
+[profile.dev]
+panic = 'abort'
+lto = true
+
+[profile.release]
+panic = 'abort'
+lto = true
+
+[dependencies]
+rlibc = "1.0"
